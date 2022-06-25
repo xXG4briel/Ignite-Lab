@@ -1,6 +1,11 @@
 import { gql, useQuery } from "@apollo/client";
 import { useEffect } from "react"
+import { Header } from "./components/Header";
+import { Lesson } from "./components/Lesson";
+import { SideBar } from "./components/SideBar";
+import { Video } from "./components/Video";
 import { client } from "./lib/apollo";
+import { Event } from "./pages/Event";
 
 const GET_LESSONS_QUERY = gql`
   query {
@@ -29,11 +34,12 @@ function App() {
   //  }, []);
   const { data } = useQuery<{ lessons: Lesson[] }>(GET_LESSONS_QUERY);
   return (
-    <ul>
-      {data?.lessons.map( lesson => {
-        return <li key={lesson.id}>{lesson.title}</li>
-      })}
-    </ul>
+    <Event/>
+    // <div>
+    //   <SideBar></SideBar>,
+    //   <Video></Video>,
+    //   <Lesson></Lesson>
+    // </div>
   )
 }
 
