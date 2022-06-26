@@ -9,3 +9,15 @@ body {
     @apply bg-gray-900 text-gray-100;
     -webkit-font-smoothing:antialiased;
 }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.rotation {
+    animation: rotate 2.4s linear infinite;
+}
