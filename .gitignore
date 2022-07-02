@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+gitignore
+firebase.json
+*.firebaserc
+hosting.ZGlzdA.cache
+.env.local
